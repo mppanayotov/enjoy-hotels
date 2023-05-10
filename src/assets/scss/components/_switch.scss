@@ -1,0 +1,23 @@
+/* ------------------------------------------------------------ *\
+	switch
+\* ------------------------------------------------------------ */
+
+.switch {
+	position: absolute; 
+	left: 0; 
+	top: 0; 
+	width: 100%; 
+	opacity: 0; 
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity .5s linear, visibility .5s linear;
+}
+
+.switch.active {
+	position: relative; 
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+	transition: opacity .5s ease-out, visibility .5s ease-out;
+	z-index: 1; 
+}

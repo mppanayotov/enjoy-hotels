@@ -1,0 +1,66 @@
+/* ------------------------------------------------------------ *\
+	placeholder-header
+\* ------------------------------------------------------------ */
+
+.placeholder-header {
+	.placeholder__overlayed {
+		transition: opacity .6s ease-out, visibility .6s ease-out;
+	}
+
+	.placeholder__alt {
+		display: none; 
+	}
+
+	.placeholder__bg {
+		transition: background-color .6s ease-out;
+	}
+
+	&.has-fixed-nav {
+		pointer-events: none;
+
+		.placeholder__bg {
+			background-color: $cream;
+		}
+
+		.placeholder__overlayed {
+			opacity: 0; 
+			visibility: hidden; 
+			pointer-events: none;
+		}
+
+		.placeholder__interactive {
+			pointer-events: auto;
+		}
+	}
+}
+
+/*  placeholder-header--alt  */
+.placeholder-header--alt {
+	.placeholder__alt {
+		display: block; 
+		transition: transform 0s .6s ease-out, opacity .6s ease-out, visibility .6s ease-out;
+		opacity: 0; 
+		visibility: hidden; 
+		transform: translateY(20px); 
+	}
+
+	&.has-fixed-nav {
+		.placeholder__alt {
+			transition: transform .6s ease-out, opacity .6s ease-out, visibility .6s ease-out;
+			opacity: 1; 
+			visibility: visible; 
+			transform: translateY(0); 
+		}
+	}
+}
+
+/*  placeholder-header--fixed  */
+.placeholder-header--fixed {
+	.placeholder__default {
+		display: none; 
+	}
+	
+	.placeholder__fixed {
+		display: block; 
+	}
+}

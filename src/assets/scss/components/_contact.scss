@@ -1,0 +1,114 @@
+/* ------------------------------------------------------------ *\
+	contact
+\* ------------------------------------------------------------ */
+
+.contact {
+	position: relative; 
+
+	h5 {
+		text-align: right; 
+		padding-top: 3px; 
+		letter-spacing: -0.02em;
+
+		@include breakpoint-small-desktop {
+			font-size: 13px; 
+			text-align: left; 
+		}
+	}
+
+	h6 {
+		margin-top: 5px; 
+		color: $desert;
+		font-weight: 600; 
+	}
+
+	.contact__text {
+		@include breakpoint-mobile-medium {
+			display: none; 
+		}
+	}
+
+	.contact__phone {
+		margin: -2px 1px 2px 3px; 
+		display: inline-block; 
+		font-size: 30px; 
+		vertical-align: middle;
+		line-height: 1; 
+
+		@include breakpoint-small-desktop {
+			margin: -1px -2px 2px -2px; 
+			font-size: 24px; 
+		}
+	}
+
+	.contact__number {
+		letter-spacing: 0.02em;
+	}
+
+	.contact__dropdown {
+		position: absolute; 
+		top: 0; 
+		right: 0; 
+		display: none; 
+	}
+}
+
+/*  contact--dropdown  */
+.contact--dropdown {
+	h5 {
+		padding-right: 90px; 
+		text-align: left; 
+	}
+
+	.contact__dropdown {
+		display: block; 
+	}
+}
+
+/*  contact--alt  */
+.contact--alt {
+	text-align: center; 
+
+	h5 {
+		text-align: center; 
+
+		@include breakpoint-small-desktop {
+			font-size: 15px; 
+		}
+	}
+
+	h6 {
+		margin-top: 0; 
+		font-size: 17px; 
+
+		@include breakpoint-small-desktop {
+			font-size: 15px; 
+		}
+	}
+}
+
+/*  contact--fixed  */
+.contact--fixed {
+	height: 33px; 
+	overflow: hidden; 
+	text-align: center; 
+	white-space: nowrap;
+
+	h5 {
+		text-align: inherit;
+	}
+
+	.contact__inner {
+		display: flex; 
+		justify-content: center;
+		flex-wrap: wrap-reverse;
+	}
+
+	.contact__aside {
+		flex: 0 0 auto;
+	}
+
+	.contact__main {
+		flex: 0 0 auto;
+	}
+}

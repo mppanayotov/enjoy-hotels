@@ -1,0 +1,45 @@
+/* ------------------------------------------------------------ *\
+	filter
+\* ------------------------------------------------------------ */
+
+.filter {
+	.filter__inner {
+		display: flex; 
+		align-items: baseline;
+
+		@include breakpoint-small-desktop {
+			display: block; 
+		}
+	}
+
+	.filter__main {
+		flex: 0 1 auto;
+	}
+
+	.filter__aside {
+		margin-left: 30px; 
+		max-width: 600px; 
+		height: 53px; 
+		flex: 1 1 auto;
+
+		@include breakpoint-small-desktop {
+			margin-top: 6px; 
+			margin-left: 0; 
+		}
+	}
+
+	.filter__dropdown {
+		position: relative; 
+		z-index: 1; 
+	}
+
+	.filter__link {
+		color: $purple;
+		font-weight: 600; 
+
+		&:hover,
+		&:focus {
+			color: $blue;
+		}
+	}
+}

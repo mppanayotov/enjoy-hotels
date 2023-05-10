@@ -1,0 +1,30 @@
+/* ------------------------------------------------------------ *\
+	spacer
+\* ------------------------------------------------------------ */
+
+.spacer {
+	position: relative; 
+	margin: 0 auto; 
+	padding-top: 30px; 
+	padding-bottom: 30px; 
+	width: 100%; 
+	max-width: $shell-max-width; 
+	height: 1px; 
+	min-height: 1px; 
+
+	@include breakpoint-small-desktop {
+		padding-top: 20px; 
+		padding-bottom: 20px; 
+	}
+
+	&:before {
+		content: '';
+		position: absolute; 
+		top: 50%; 
+		left: 0; 
+		width: 100%; 
+		height: 1px; 
+		min-height: 1px; 
+		background-color: currentColor; 
+	}
+}

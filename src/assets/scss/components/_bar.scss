@@ -1,0 +1,87 @@
+/* ------------------------------------------------------------ *\
+	bar
+\* ------------------------------------------------------------ */
+
+.bar {
+	position: fixed; 
+	left: 0; 
+	right: 0; 
+	bottom: 0; 
+	height: 60px; 
+	z-index: 50; 
+	display: none; 
+
+	@include breakpoint-small-desktop {
+		display: block; 
+	}
+
+	.bar__inner {
+		display: flex; 
+	}
+
+	.bar__contact {
+		margin-left: -$shell-gutter; 
+		padding: 15px; 
+		padding-left: $shell-gutter; 
+		flex: 1 1 auto;
+		height: 60px; 
+	}
+
+	.bar__btn {
+		flex: 0 0 auto;
+		border-left: 1px solid $light;
+		padding: 16px 14px 19px 15px; 
+		height: 60px; 
+		display: flex; 
+		align-items: center;
+		font-size: 13px; 
+		line-height: 1; 
+		font-weight: 800; 
+		color: $purple;
+		letter-spacing: -0.04em;
+
+		@include breakpoint-mobile-medium {
+			font-size: 0; 
+		}
+
+		&:hover {
+			background-color: $purple; 
+			color: $white;
+
+			@include breakpoint-tablet {
+				background-color: transparent; 
+				color: $purple;
+			}
+		}
+		
+		&.active {
+			background-color: $purple; 
+			color: $white;
+
+			&:hover {
+				background-color: $purple; 
+				color: $white;
+			}
+		}
+	}
+
+	.bar__btn i {
+		margin-right: 7px; 
+		font-size: 25px; 
+
+		@include breakpoint-mobile-medium {
+			margin-right: 0; 
+		}
+	}
+
+	.bar__btn--home {
+		i {
+			margin-right: 2px; 
+		}
+	}
+
+	.bar__btn:last-child {
+		margin-right: -$shell-gutter; 
+		padding-right: $shell-gutter; 
+	}
+}

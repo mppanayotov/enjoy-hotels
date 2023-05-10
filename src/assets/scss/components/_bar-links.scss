@@ -1,0 +1,71 @@
+/* ------------------------------------------------------------ *\
+	bar-links
+\* ------------------------------------------------------------ */
+
+.bar-links {
+	line-height: 1.2; 
+
+	.bar__inner {
+		margin-left: auto; 
+		margin-right: auto; 
+		width: 100%; 
+		max-width: $shell-final-width; 
+		display: flex; 
+		flex-wrap: wrap;
+		overflow: hidden; 
+
+		@include breakpoint-small-desktop {
+			display: block; 
+		}
+	}
+
+	.bar__list {
+		position: relative; 
+		padding: 25px 0;
+		flex: 0 1 auto;
+		font-size: 17px; 
+
+		@include breakpoint-small-desktop {
+			padding-top: 20px; 
+			padding-bottom: 15px; 
+			font-size: 15px; 
+		}
+		
+		&:before {
+			content: '';
+			position: absolute; 
+			top: 0; 
+			left: -1px; 
+			bottom: 0; 
+			width: 1px; 
+			background-color: $electric; 
+			pointer-events: none;
+		}
+
+		&:after {
+			content: '';
+			position: absolute; 
+			top: -1px; 
+			left: $shell-gutter; 
+			bottom: 0; 
+			width: calc(100vw - #{$shell-gutter} * 2); 
+			max-width: $shell-max-width; 
+			height: 1px; 
+			background-color: $electric; 
+			pointer-events: none;
+		}
+	}
+
+	.bar__list--alt {
+		display: flex; 
+		align-items: flex-end;
+		font-size: inherit; 
+	}
+
+	.bar__list + .bar__list {
+		@include breakpoint-small-desktop {
+			padding-top: 15px; 
+			padding-bottom: 20px; 
+		}
+	}
+}

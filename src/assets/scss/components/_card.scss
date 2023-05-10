@@ -1,0 +1,37 @@
+/* ------------------------------------------------------------ *\
+	card
+\* ------------------------------------------------------------ */
+
+.card {
+	padding: 30px 20px;
+}
+
+/* ------------------------------------------------------------ *\
+	cards
+\* ------------------------------------------------------------ */
+
+.cards {
+	display: flex; 
+	overflow: hidden; 
+
+	@include breakpoint-mobile {
+		display: block; 
+	}
+
+	.card {
+		width: 1 1 25%; 
+		flex: 1 1 auto;
+
+		@include breakpoint-small-desktop {
+			min-width: 50%; 
+		}
+
+		@include breakpoint-mobile {
+			min-width: 100%; 
+		}
+	}
+
+	.card:nth-of-type(even) {
+		background-color: $cream-light;
+	}
+}

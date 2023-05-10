@@ -1,0 +1,26 @@
+/* ------------------------------------------------------------ *\
+	Shell
+\* ------------------------------------------------------------ */
+
+.shell {
+	margin-left: auto; 
+	margin-right: auto; 
+	padding-right: $shell-gutter;
+	padding-left: $shell-gutter;
+	width: 100%; 
+	max-width: $shell-max-width + $shell-gutter * 2;
+	flex: 1 1 auto;
+}
+
+/*  Shell fluid  */
+.shell--fluid {
+	max-width: none;
+}
+
+/*  shell--p-0-sm  */
+.shell--p-sm-0 {
+	@include breakpoint-tablet {
+		padding-left: 0; 
+		padding-right: 0; 
+	}
+}

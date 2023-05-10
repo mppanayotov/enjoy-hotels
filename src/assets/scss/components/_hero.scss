@@ -1,0 +1,114 @@
+/* ------------------------------------------------------------ *\
+	hero
+\* ------------------------------------------------------------ */
+
+.hero {
+	margin-left: auto; 
+	margin-right: auto; 
+	width: 100%; 
+	padding: 0 $shell-gutter; 
+	max-width: $shell-final-width;
+
+	@include breakpoint-small-desktop {
+		padding: 0; 
+	}
+
+	.hero__sizer {
+		padding-top: 48%;
+		min-height: 430px; 
+
+		@include breakpoint-tablet {
+			padding-top: 70%;
+		}
+
+		@include breakpoint-mobile {
+			padding-top: 89.58%;
+		}
+	}
+
+	.hero__inner {
+		position: fixed; 
+		top: 100px; 
+		left: $shell-gutter; 
+		right: $shell-gutter; 
+		margin-left: auto; 
+		margin-right: auto; 
+		width: calc(100% - #{$shell-gutter} * 2); 
+		max-width: $shell-max-width; 
+		overflow: hidden; 
+
+		@include breakpoint-small-desktop {
+			left: 0; 
+			right: 0; 
+			top: 80px; 
+			width: 100%; 
+		}
+	}
+
+	.hero__tiles {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%; 
+	}
+
+	.hero__title {
+		position: absolute; 
+		top: 50%; 
+		left: 50%; 
+		transform: translate(-50%, -50%); 
+		padding-bottom: 20px; 
+		font-size: 48px; 
+		line-height: 1.3; 
+		color: $white;
+		text-shadow: 0 2px rgba($purple, .7);
+
+		@include breakpoint-small-desktop {
+			font-size: 28px; 
+		}
+
+		@include breakpoint-mobile-medium {
+			font-size: 18px; 
+		}
+	}
+
+	.hero__image {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%; 
+	}
+
+	.hero__poster {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%; 
+	}
+
+	.hero__shade {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%; 
+	}
+}
+
+/*  hero--sm  */
+.hero--sm {
+	.hero__sizer {
+		padding-top: 31.51%; 
+	}
+
+	.hero__tiles .hero__content {
+		padding-top: 117px; 
+
+		@include breakpoint-mobile {
+			padding-top: 35px; 
+		}
+	}
+}

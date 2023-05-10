@@ -1,0 +1,170 @@
+<div class="form form--booking">
+	<form action="?" method="post">
+		<h2>Persoons- & Contactgegevens</h2>
+
+		<h5>Persoonsgegevens</h5>
+
+		<div class="form__row form__row--wrap">
+			<div class="form__col form__col--size-2">
+				<div class="form__controls form__controls--size-2">
+					<label for="select-booking-title" class="form__label">Aanhef</label>
+					 
+					<div class="select select2-parent form__select js-dropdown-parent">
+						<select class="js-dropdown js-dropdown-lg" id="select-booking-title">
+							<option value="00">Selecteer</option>
+							<option value="01">Option 2</option>
+							<option value="02">Option 3</option>
+							<option value="03">Option 4</option>
+						</select>
+					</div><!-- /.select -->
+
+					<div class="form__invalid">
+						Dit veld is verplicht
+					</div><!-- /.form__invalid -->
+				</div><!-- /.form__controls -->
+			</div><!-- /.form__col -->
+
+			<div class="form__col form__col--size-3">
+				<div class="form__controls">
+					<label for="field-booking-first-name" class="form__label">Voornaam</label>
+					 
+					<input id="field-booking-first-name" type="text" class="field form__field">
+
+					<div class="form__invalid">
+						Dit veld is verplicht
+					</div><!-- /.form__invalid -->
+				</div><!-- /.form__controls -->
+			</div><!-- /.form__col -->
+
+			<div class="form__col form__col--size-3">
+				<div class="form__controls">
+					<label for="field-booking-last-name" class="form__label">Achternaam</label>
+					 
+					<input id="field-booking-last-name" type="text" class="field form__field">
+
+					<div class="form__invalid">
+						Dit veld is verplicht
+					</div><!-- /.form__invalid -->
+				</div><!-- /.form__controls -->
+			</div><!-- /.form__col -->
+		</div><!-- /.form__row -->
+
+		<div class="spacer color-gray"></div><!-- /.spacer -->
+
+		<h5>Contactgegevens</h5>
+
+		<div class="form__row">
+			<div class="form__col">
+				<div class="form__controls">
+					<label for="field-booking-street" class="form__label">Straatnaam</label>
+					 
+					<input id="field-booking-street" type="text" class="field form__field">
+
+					<div class="form__invalid">
+						Dit veld is verplicht
+					</div><!-- /.form__invalid -->
+				</div><!-- /.form__controls -->
+			</div><!-- /.form__col -->
+
+			<div class="form__col form__col--size-4">
+				<div class="form__controls">
+					<label for="field-booking-street-number" class="form__label">Huisnummer</label>
+					 
+					<input id="field-booking-street-number" type="text" class="field form__field">
+
+					<div class="form__invalid">
+						Dit veld is verplicht
+					</div><!-- /.form__invalid -->
+				</div><!-- /.form__controls -->
+			</div><!-- /.form__col -->
+		</div><!-- /.form__row -->
+
+		<div class="form__row">
+			<div class="form__col form__col--size-4">
+				<div class="form__controls">
+					<label for="field-booking-post" class="form__label">Postcode</label>
+					 
+					<input id="field-booking-post" type="text" class="field form__field">
+
+					<div class="form__invalid">
+						Dit veld is verplicht
+					</div><!-- /.form__invalid -->
+				</div><!-- /.form__controls -->
+			</div><!-- /.form__col -->
+
+			<div class="form__col">
+				<div class="form__controls">
+					<label for="field-booking-city" class="form__label">Plaatsnaam</label>
+					 
+					<input id="field-booking-city" type="text" class="field form__field">
+
+					<div class="form__invalid">
+						Dit veld is verplicht
+					</div><!-- /.form__invalid -->
+				</div><!-- /.form__controls -->
+			</div><!-- /.form__col -->
+		</div><!-- /.form__row -->
+
+		<div class="form__row form__row--wrap">
+			<div class="form__col form__col--size-3">
+				<div class="form__controls">
+					<label for="field-booking-phone" class="form__label">Telefoonnummer</label>
+					 
+					<input id="field-booking-phone" type="text" class="field form__field">
+
+					<div class="form__invalid">
+						Dit veld is verplicht
+					</div><!-- /.form__invalid -->
+				</div><!-- /.form__controls -->
+			</div><!-- /.form__col -->
+
+			<div class="form__col form__col--size-3">
+				<div class="form__controls">
+					<label for="field-booking-mail" class="form__label">E-mailadres</label>
+					 
+					<input id="field-booking-mail" type="text" class="field form__field">
+
+					<div class="form__invalid">
+						Dit veld is verplicht
+					</div><!-- /.form__invalid -->
+				</div><!-- /.form__controls -->
+			</div><!-- /.form__col -->
+		</div><!-- /.form__row -->
+
+		<div class="spacer color-black"></div><!-- /.spacer -->
+
+		<div class="form__actions">
+			<div class="btns">
+				<div class="btns__entry">
+					<button
+						class="btn btn--reverse btn--blue js-tab-remote js-tab-remote-solid active"
+						data-target=".tab-booking-1"
+					>
+						<span class="btn__content">
+							<h5 class="btn__title">Vorige stap</h5>
+						</span>
+						
+						<span class="btn__icon">
+							<i class="fas fa-arrow-left"></i>
+						</span>
+					</button>
+				</div><!-- /.btns__entry -->
+				
+				<div class="btns__entry">
+					<button
+						class="btn btn--green js-tab-remote js-tab-remote-solid"
+						data-target=".tab-booking-3"
+					>
+						<span class="btn__content">
+							<h5 class="btn__title">Volgende stap</h5>
+						</span>
+						
+						<span class="btn__icon">
+							<i class="fas fa-arrow-right"></i>
+						</span>
+					</button>
+				</div><!-- /.btns__entry -->
+			</div><!-- /.btns -->
+		</div><!-- /.form__actions -->
+	</form>
+</div><!-- /.form -->

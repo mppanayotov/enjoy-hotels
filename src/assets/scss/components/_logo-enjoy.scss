@@ -1,0 +1,49 @@
+/* ------------------------------------------------------------ *\
+	Logo
+\* ------------------------------------------------------------ */
+
+.logo-enjoy {
+	position: relative; 
+	display: block; 
+	width: 287px; 
+	max-width: 100%; 
+	height: 70px; 
+
+	@include breakpoint-small-desktop {
+		width: 218px; 
+		height: 50px; 
+	}
+
+	h6 {
+		position: absolute; 
+		bottom: 0; 
+		right: 0; 
+		line-height: 1; 
+		user-select: none;
+		font-weight: 600; 
+		white-space: nowrap;
+
+		@include breakpoint-small-desktop {
+			padding-bottom: 2px; 
+			padding-right: 1px; 
+			font-size: 11px; 
+		}
+	}
+
+	.logo__icon {
+		display: block; 
+		color: $purple;
+	}
+
+	&:hover,
+	&:focus {
+		.logo__icon {
+			color: $blue;
+		}
+
+		.logo__rect svg {
+			opacity: 0; 
+			visibility: hidden; 
+		}
+	}
+}

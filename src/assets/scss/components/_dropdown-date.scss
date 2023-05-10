@@ -1,0 +1,18 @@
+/* ------------------------------------------------------------ *\
+	dropdown-date
+\* ------------------------------------------------------------ */
+
+.dropdown-date {
+	width: 100%; 
+	max-width: 360px; 
+	height: 32px; 
+	font: inherit;
+
+	@include breakpoint-mobile {
+		max-width: 290px; 
+	}
+
+	@include breakpoint-mobile-medium {
+		max-width: none; 
+	}
+}

@@ -1,0 +1,82 @@
+/* ------------------------------------------------------------ *\
+	stamp
+\* ------------------------------------------------------------ */
+
+.stamp {
+	padding: 6px 10px; 
+	border-radius: 0 20px 0 20px;
+	min-width: 64px; 
+	background-color: currentColor;
+	flex: 0 1 auto;
+	font-size: 13px; 
+	letter-spacing: -0.04em; 
+	font-weight: 600; 
+	line-height: 1; 
+
+	@include breakpoint-small-desktop {
+		padding: 6px 8px 6px 10px;
+		border-radius: 0 10px 0 10px;
+		min-width: 0;
+		font-size: 11px; 
+	}
+
+	h6 {
+
+	}
+
+	h6 + p {
+		margin-top: 2px; 
+	}
+
+	.stamp__inner {
+		display: flex; 
+	}
+
+	.stamp__content {
+		color: $black;
+		flex: 1 1 auto;
+	}
+
+	.stamp__icon {
+		margin-right: 8px; 
+		flex: 0 0 auto;
+		display: flex; 
+		justify-content: center;
+		align-items: center;
+		text-align: center; 
+	}
+}
+
+/*  stamp--alt  */
+.stamp--alt {
+	padding-left: 8px; 
+	text-transform: uppercase; 
+	@include grad(150deg, $desert, $fallow);
+
+	h6 {
+		color: $white;
+	}
+}
+ 
+/* ------------------------------------------------------------ *\
+	stamps
+\* ------------------------------------------------------------ */
+
+.stamps {
+	display: flex; 
+
+	.stamps__inner {
+		margin: -2px; 
+		flex: 0 1 auto;
+		display: flex; 
+		justify-content: flex-end;
+
+		@include breakpoint-mobile-medium {
+			justify-content: flex-start;
+		}
+	}
+
+	.stamp {
+		margin: 2px; 
+	}
+}

@@ -1,0 +1,73 @@
+/* ------------------------------------------------------------ *\
+	component
+\* ------------------------------------------------------------ */
+
+.component {
+	.component__stamp {
+		display: none; 
+	}
+}
+
+/*  Stars control  */
+.component--stars-0 {
+	.component__stars {
+		display: none; 
+	}
+}
+
+.component--stars-1 {
+	.component__star:nth-of-type(n+2) {
+		display: none; 
+	}
+}
+
+.component--stars-2 {
+	.component__star:nth-of-type(n+3) {
+		display: none; 
+	}
+}
+
+.component--stars-3 {
+	.component__star:nth-of-type(n+4) {
+		display: none; 
+	}
+}
+
+.component--stars-4 {
+	.component__star:nth-of-type(n+5) {
+		display: none; 
+	}
+}
+
+/*  Stamps control  */
+.component--stamp-deluxe {
+	.component__stamp--deluxe {
+		display: block; 
+	}
+}
+
+.component--stamp-actie {
+	.component__stamp--actie {
+		display: block; 
+	}
+}
+
+.component--stamp-new {
+	.component__stamp--new {
+		display: block; 
+	}
+}
+
+/*  Actions control  */
+.component--noactions {
+	.component__actions {
+		display: none; 
+	}
+}
+
+/*  Price in button control  */
+.component--noprice {
+	.component__price {
+		display: none; 
+	}
+}

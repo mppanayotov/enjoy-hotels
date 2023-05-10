@@ -1,0 +1,119 @@
+/* ------------------------------------------------------------ *\
+	article-callout
+\* ------------------------------------------------------------ */
+
+.article-callout {
+	position: relative; 
+	height: 100%; 
+	display: flex; 
+	flex-direction: column;
+	letter-spacing: -.015em;
+
+	@include breakpoint-mobile {
+		padding-top: 40px; 
+	}
+
+	h2 {
+		text-align: center; 
+		letter-spacing: -.015em;
+
+		@include breakpoint-small-desktop {
+			font-size: 28px; 
+		}
+
+		@include breakpoint-mobile-medium {
+			font-size: 21px; 
+		}
+	}
+
+	ul {
+		margin-top: 15px; 
+		flex: 1 1 auto;
+		font-style: italic;
+		font-size: 17px; 
+
+		@include breakpoint-mobile {
+			font-size: 15px; 
+		}
+	}
+
+	ul li {
+		position: relative; 
+		padding: 5px 0 5px 26px; 
+
+		&:before {
+			content: '✓';
+			position: absolute; 
+			left: 0; 
+			top: 0; 
+			font-size: 24px; 
+			font-weight: 800; 
+			font-style: normal;
+			color: $forest;
+		}
+
+		@include breakpoint-mobile {
+			&:before {
+				font-size: 19px; 
+			}
+		}
+	}
+
+	.article__inner {
+		position: relative; 
+		padding: 16px 20px 24px; 
+		border: 1px solid $gray;
+		border-radius: 0 40px 0 40px;
+		height: 100%; 
+		display: flex; 
+		flex-direction: column;
+
+		@include breakpoint-mobile-medium {
+			padding-left: 10px; 
+			padding-right: 10px; 
+		}
+	}
+
+	.article__callout {
+		margin-top: 8px; 
+		flex: 1 1 auto;
+	}
+
+	.article__label {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		padding: 10px;
+		width: 100%; 
+		height: 40px; 
+		border-top-right-radius: 40px;
+		display: flex; 
+		align-items: center;
+		justify-content: center;
+		text-align: center; 
+
+		&:before {
+			content: '';
+			position: absolute; 
+			top: 0; 
+			left: 0; 
+			border-top-right-radius: 40px;
+			width: 100%; 
+			height: 80px; 
+			background-color: $cream; 
+			pointer-events: none;
+		}
+	}
+
+	.article__label h6 {
+		position: relative; 
+		margin: auto; 
+		font-weight: 600; 
+	}
+
+	.article__contact {
+		margin-top: 26px; 
+		padding-top: 26px; 
+		border-top: 1px solid $light;
+	}
+}

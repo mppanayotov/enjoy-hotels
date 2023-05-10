@@ -1,0 +1,29 @@
+/* ------------------------------------------------------------ *\
+	shade-grad
+\* ------------------------------------------------------------ */
+
+.shade-grad {
+	position: absolute; 
+	left: 0; 
+	top: 100%; 
+	width: 100%; 
+	height: 6px; 
+	pointer-events: none;
+	@include grad-transparent(180deg, currentColor, 0%, 100%);
+}
+
+/*  shade-grad--big  */
+.shade-grad--big {
+	height: 120px; 
+
+	@include breakpoint-small-desktop {
+		height: 60px; 
+	}
+}
+
+/*  shade-grad--reverse  */
+.shade-grad--reverse {
+	top: auto;
+	bottom: 100%; 
+	transform: scaleY(-1); 
+}

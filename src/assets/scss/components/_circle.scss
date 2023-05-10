@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------ *\
+	circle
+\* ------------------------------------------------------------ */
+
+.circle {
+	position: relative; 
+	width: 100%; 
+	padding-top: 100%;
+	border-radius: 100%;
+	display: block; 
+	text-align: center; 
+	line-height: 1; 
+	letter-spacing: 0;
+	background-color: currentColor;
+
+	.circle__content {
+		position: absolute; 
+		top: 50%; 
+		left: 50%; 
+		transform: translate(-50%, -50%); 
+	}
+}

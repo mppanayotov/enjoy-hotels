@@ -1,0 +1,34 @@
+/* ------------------------------------------------------------ *\
+	card-big
+\* ------------------------------------------------------------ */
+
+.card-big {
+	position: relative; 
+
+	.card__image {
+		position: relative; 
+		padding-top: 74.95%; 
+	}
+
+	.card__poster {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%; 
+	}
+
+	.card__title {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		padding: 20px;
+		text-shadow: 0 2px rgba($purple, .7);
+		color: $white;
+	}
+
+	.card__article {
+		padding: 20px; 
+	}
+}

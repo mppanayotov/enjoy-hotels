@@ -1,0 +1,55 @@
+/* ------------------------------------------------------------ *\
+	list-menu
+\* ------------------------------------------------------------ */
+
+.list-menu {
+	font-size: 17px; 
+	font-weight: 600; 
+	line-height: 1.5; 
+	letter-spacing: -0.03em; 
+
+	li {
+		padding-top: 17px; 
+		border-top: 1px solid $light;
+	}
+
+	li + li {
+		margin-top: 17px; 
+	}
+
+	li:last-of-type {
+		margin-bottom: 10px; 
+		padding-bottom: 17px; 
+		border-bottom: 1px solid $light; 
+	}
+}
+
+/*  list-menu--alt  */
+.list-menu--alt {
+	margin-left: -20px; 
+	margin-bottom: -18px; 
+	padding: 20px 0 2px; 
+	display: flex; 
+	flex-wrap: wrap;
+	font-size: 13px; 
+	line-height: 1.5; 
+	letter-spacing: -0.05em; 
+
+	li {
+		padding-top: 0; 
+		margin-left: 20px; 
+		margin-bottom: 18px; 
+		border-top: none;
+		flex: 0 1 auto;
+	}
+
+	li + li {
+		margin-top: 0; 
+	}
+
+	li:last-of-type {
+		margin-bottom: 18px; 
+		padding-bottom: 0; 
+		border-bottom: none; 
+	}
+}

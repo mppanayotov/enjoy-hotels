@@ -1,0 +1,84 @@
+//Variables
+
+$font-family-sans-serif: Arial, Helvetica, sans-serif;
+$font-family-serif: Times, 'Times New Roman', serif;
+
+$open: 'Open Sans', $font-family-sans-serif;
+
+$open: 'Open Sans', $font-family-sans-serif;
+
+$font-size-base: 15px;
+$line-height-base: 1.6;
+
+$shell-max-width: 1460px;
+$shell-gutter: 20px;
+$shell-final-width: $shell-max-width + $shell-gutter * 2;
+
+// Grid variables
+$grid-spacer: 23px;
+$grid-spacer-x-sm: 10px;
+$grid-spacer-y-sm: 15px;
+
+// Masonry grid variables
+$grid-alt-spacer: 15px;
+$grid-alt-spacer-sm: 10px;
+
+// Header variables
+$logo-size-mobile: 218px;
+$sidebar-width: 430px;
+$sidebar-half-width: $sidebar-width / 2;
+$header-height: 170px;
+$header-height-sm: 150px;
+$header-inner-height: 120px;
+$header-inner-height-sm: 100px;
+$header-offset: 20px;
+$header-gutter-xxs: 10px;
+
+// Gallery variables
+$thumbs-height: 143px;
+$main-inner-padding-bottom: 30px;
+$gallery-padding: $header-height + $main-inner-padding-bottom + $thumbs-height;
+$gallery-ratio: 61.65;
+$gallery-max-height: $shell-max-width * $gallery-ratio / 100;
+
+//Breakpoints associated with the mixins
+$responsive-xxxs: 374px;
+$responsive-xxs: 479px;
+$responsive-xs: 767px;
+$responsive-sm: 1023px;
+$responsive-md: 1199px;
+
+$responsive-ios: 812px;
+
+// Usage
+// @include breakpoint-tablet {}
+
+$tsi: transform 0.3s ease-out, border-color .3s ease-out, border-radius .3s ease-out, max-height .3s ease-out, max-width .3s ease-out, background-color .3s ease-out, box-shadow .3s ease-out, color 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out;
+
+/* Colors */
+$black: #000;
+$white: #fff;
+
+$gray: #8F8F8F;
+$light: #DEDEDE;
+
+$cream: #F1F1EE;
+$cream-light: #F8F8F6;
+
+$purple: #004387;
+$purple-dark: #002D5B;
+$violet: #1A1B3A;
+$blue: #0077CC;
+$electric: #1984D1;
+$sky: #99C8EB;
+
+$grass: #39924D;
+$forest: #378A14;
+$apple: #60B53C;
+
+$desert: #9B7539;
+$fallow: #be9b63;
+
+$aths: #D9CCB8;
+
+$sunset: #F64949;

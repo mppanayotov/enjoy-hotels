@@ -1,0 +1,62 @@
+/* ------------------------------------------------------------ *\
+	Mixins
+\* ------------------------------------------------------------ */
+
+/*  Responsive queries  */
+@mixin breakpoint-mobile-small {
+	@media (max-width: $responsive-xxxs) {
+		@content;
+	}
+}
+
+@mixin breakpoint-mobile-medium {
+	@media (max-width: $responsive-xxs) {
+		@content;
+	}
+}
+
+@mixin breakpoint-mobile {
+	@media (max-width: $responsive-xs), screen and (max-width: $responsive-ios) and (orientation: landscape) {
+		@content;
+	}
+}
+
+@mixin breakpoint-tablet {
+	@media (max-width: $responsive-sm) {
+		@content;
+	}
+}
+
+@mixin breakpoint-small-desktop {
+	@media (max-width: $responsive-md) {
+		@content;
+	}
+}
+
+@mixin retina {
+	@media (min-resolution: 2dppx) {
+		@content;
+	}
+}
+
+/*  Font awesome  */
+@mixin fas {
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	font-family: "Font Awesome 5 Pro";
+	font-weight: 300;
+  content: '';
+}
+
+/*  Color to color gradient  */
+@mixin grad($deg, $color1, $color2) {
+  background: linear-gradient($deg, $color1 0%, $color2 100%);
+}
+
+/*  Color to transparent gradient  */
+@mixin grad-transparent($deg, $color, $hold, $stop) {
+  background: linear-gradient($deg, $color 0%, $color $hold, transparent $stop);
+}

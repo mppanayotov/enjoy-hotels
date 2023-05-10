@@ -1,0 +1,78 @@
+/* ------------------------------------------------------------ *\
+	sidebar
+\* ------------------------------------------------------------ */
+
+.sidebar {
+	.sidebar__card {
+		padding-top: 20px; 
+		padding-bottom: 20px; 
+	}
+
+	.sidebar__entry + .sidebar__entry {
+		border-top: 1px solid $aths;
+	}
+
+	.sidebar__entry:first-of-type .sidebar__card {
+		padding-top: 30px; 
+	}
+
+	.sidebar__entry:last-of-type .sidebar__card {
+		padding-bottom: 30px; 
+	}
+}
+
+/*  sidebar--sm  */
+.sidebar--sm {
+	.sidebar__card {
+		padding-left: 0; 
+		padding-right: 0; 
+	}
+
+	.sidebar__entry:first-of-type .sidebar__card {
+		@include breakpoint-small-desktop {
+			padding-top: 0; 
+		}
+	}
+
+	.sidebar__entry:last-of-type .sidebar__card {
+		@include breakpoint-small-desktop {
+			padding-bottom: 0; 
+		}
+	}
+}
+
+/*  sidebar--alt  */
+.sidebar--alt {
+	font-size: 17px;
+
+	.sidebar__entry,
+	.sidebar__switch {
+		padding: 20px;
+
+		@include breakpoint-mobile-medium {
+			padding: 10px; 
+		}
+	}
+
+	.sidebar__entry {
+		border-bottom: 1px solid $aths;
+	}
+
+	.sidebar__entry--alt,
+	.sidebar__switch {
+		border-bottom: 1px solid $desert;
+	}
+	
+	.sidebar__entry:last-of-type {
+		border-bottom: 0; 
+	}
+
+	.sidebar__entry + .sidebar__entry,
+	.sidebar__switch {
+		border-top: 0; 
+	}
+
+	@include breakpoint-small-desktop {
+		font-size: 15px; 
+	}
+}

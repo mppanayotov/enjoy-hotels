@@ -1,0 +1,17 @@
+/* ------------------------------------------------------------ *\
+	price
+\* ------------------------------------------------------------ */
+
+.price {
+	white-space: nowrap;
+	font-size: 13px; 
+	line-height: 1; 
+
+	.price__big {
+		font-size: 21px; 
+
+		@include breakpoint-small-desktop {
+			font-size: 15px; 
+		}
+	}
+}

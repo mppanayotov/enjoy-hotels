@@ -1,0 +1,33 @@
+/* ------------------------------------------------------------ *\
+	Wrapper
+\* ------------------------------------------------------------ */
+
+.wrapper {
+	position: relative; 
+	min-height: 100vh; 
+	overflow: hidden; 
+	z-index: 0; 
+
+	@include breakpoint-small-desktop {
+		padding-bottom: 60px; 
+	}
+	
+	.wrapper__arrangements-hidden {
+		position: relative; 
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+		transition: opacity .3s ease-out, visibility .3s ease-out;
+	}
+}
+
+/*  wrapper arrangements active  */
+.wrapper.has-arrangements-active {
+	.wrapper__arrangements-hidden {
+		position: absolute; 
+		opacity: 0; 
+		visibility: hidden;
+		pointer-events: none;
+		transition: opacity .3s linear, visibility .3s linear;
+	}	
+}

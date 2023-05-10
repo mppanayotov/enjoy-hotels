@@ -1,0 +1,36 @@
+/* ------------------------------------------------------------ *\
+	Main
+\* ------------------------------------------------------------ */
+
+.main {
+	position: relative; 
+	padding-top: 100px; 
+
+	@include breakpoint-small-desktop {
+		padding-top: 80px; 
+	}
+
+	.main__inner {
+		position: relative; 
+		padding-top: 30px; 
+		padding-bottom: 30px; 
+		background: $white; 
+		z-index: 2; 
+
+		@include breakpoint-tablet {
+			padding-bottom: 15px; 
+		}
+	}
+
+	.main__link {
+		position: absolute; 
+		top: -($header-inner-height + $header-offset);
+		pointer-events: none;
+		visibility: hidden; 
+		opacity: 0; 
+
+		@include breakpoint-small-desktop {
+			top: -($header-inner-height-sm + $header-offset);
+		}
+	}
+}

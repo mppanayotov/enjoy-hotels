@@ -1,0 +1,42 @@
+/* ------------------------------------------------------------ *\
+	isotope
+\* ------------------------------------------------------------ */
+
+.isotope {
+	margin: 0 #{-$grid-alt-spacer};
+	margin-bottom: -$grid-alt-spacer * 2;
+
+	@include breakpoint-small-desktop {
+		margin: 0 #{-$grid-alt-spacer};
+		margin-bottom: -$grid-alt-spacer-sm * 2;
+	}
+
+	.isotope__sizer {
+		width: 33.33%; 
+
+		@include breakpoint-small-desktop {
+			width: 50%; 
+		}
+
+		@include breakpoint-mobile {
+			width: 100%; 
+		}
+	}
+
+	.isotope__item {
+		margin-bottom: $grid-alt-spacer * 2;
+		padding: 0 $grid-alt-spacer; 
+		display: flex; 
+		width: 33.33%; 
+
+		@include breakpoint-small-desktop {
+			margin-bottom: $grid-alt-spacer-sm * 2;
+			padding: 0 $grid-alt-spacer-sm; 
+			width: 50%; 
+		}
+
+		@include breakpoint-mobile {
+			width: 100%; 
+		}
+	}
+}

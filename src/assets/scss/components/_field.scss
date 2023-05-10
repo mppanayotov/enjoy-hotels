@@ -1,0 +1,81 @@
+/* ------------------------------------------------------------ *\
+	Fields
+\* ------------------------------------------------------------ */
+
+input::placeholder {
+	color: inherit;
+	opacity: 1;
+}
+
+textarea::placeholder {
+	color: inherit;
+	opacity: 1;
+}
+
+input,
+textarea,
+button {
+	background: none;
+	box-shadow: none;
+	appearance: none;
+	border: 0;
+	border-radius: 0;
+}
+
+input,
+textarea {
+	width: 100%;
+}
+
+textarea {
+	resize: none;
+}
+
+::-ms-clear { display: none; }
+
+input:-webkit-autofill {
+	-webkit-text-fill-color: inherit;
+	-webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+
+.field {
+	padding: 11px 17px 13px;
+	border: 3px solid rgba($light, 1);
+	height: 53px; 
+	width: 100%; 
+	box-shadow: 0 0 6px transparent;
+	display: block; 
+	transition: $tsi;
+	font-size: 17px; 
+	line-height: 1; 
+	font-weight: 600; 
+
+	@include breakpoint-small-desktop {
+		padding: 10px 12px 12px; 
+		font-size: 15px; 
+		height: 44px; 
+	}
+
+	&:hover,
+	&:focus {
+		box-shadow: 0 0 6px rgba($black, .6);
+	}
+}
+
+/*  field--textarea  */
+.field--textarea {
+	height: 300px; 
+
+	@include breakpoint-small-desktop {
+		height: 264px; 
+	}
+}
+
+/*  field--textarea-sm  */
+.field--textarea-sm {
+	height: 160px; 
+
+	@include breakpoint-small-desktop {
+		height: 220px; 
+	}
+}

@@ -1,0 +1,29 @@
+/* ------------------------------------------------------------ *\
+	callout
+\* ------------------------------------------------------------ */
+
+.callout {
+	position: relative; 
+	padding: 13px 20px 14px; 
+	text-align: center; 
+	color: $white;
+	overflow: hidden; 
+
+	@include breakpoint-mobile {
+		padding: 12px 20px;
+	}
+
+	.callout__bg {
+		position: absolute; 
+		top: 0; 
+		left: -20%; 
+		width: 120%; 
+		height: 100%; 
+		@include grad(115deg, $desert, $fallow);
+	}
+
+	h5 {
+		position: relative; 
+    letter-spacing: -.02em;
+	}
+}

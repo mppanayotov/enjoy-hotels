@@ -1,0 +1,63 @@
+/* ------------------------------------------------------------ *\
+	header
+\* ------------------------------------------------------------ */
+
+.header {
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	right: 0; 
+	padding: 20px 0 10px; 
+	height: 100px; 
+	z-index: 10; 
+
+	@include breakpoint-small-desktop {
+		height: 80px; 
+	}
+
+	.header__shell {
+		@include breakpoint-mobile-medium {
+			padding-left: $header-gutter-xxs; 
+			padding-right: $header-gutter-xxs; 
+		}
+	}
+
+	.header__inner {
+		position: relative; 
+		display: flex; 
+	}
+
+	.header__logo {
+		flex: 0 0 auto;
+	}
+
+	.header__articles {
+		margin: -14px auto 0;
+		padding-left: 95px; 
+		max-width: 455px; 
+		flex: 1 1 auto;
+
+		@include breakpoint-small-desktop {
+			margin: 0 0 0 auto; 
+			padding-left: 9px; 
+			max-width: calc(100% - #{$logo-size-mobile}); 
+			flex: 0 1 0%;
+		}
+
+		@include breakpoint-mobile-medium {
+			display: none; 
+		}
+	}
+
+	.header__contact {
+		margin-top: 15px; 
+		flex: 0 0 auto;
+	}
+
+	.header__contact--alt {
+		position: absolute; 
+		right: $sidebar-width; 
+		left: 415px; 
+		padding: 0 20px;
+	}
+}

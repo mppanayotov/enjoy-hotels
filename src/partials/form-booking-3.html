@@ -1,0 +1,187 @@
+<div class="form form--booking">
+	<form action="?" method="post">
+		<h2>Opties & Afronding</h2>
+
+		<h5>Opmerkingen</h5>
+
+		<div class="form__controls is-valid">
+			<label for="field-booking-comment" class="form__label">Indien u opmerkingen heeft betreft uw boeking, dan kunt u deze hier vermelden.</label>
+				
+			<textarea id="field-booking-comment" class="field field--textarea field--textarea-sm form__field"></textarea>
+
+			<div class="form__invalid">
+				Dit veld is verplicht
+			</div><!-- /.form__invalid -->
+		</div><!-- /.form__controls -->
+
+		<div class="spacer color-gray"></div><!-- /.spacer -->
+
+		<h5>Wilt u onze annuleringsservice afsluiten?</h5>
+
+		<p>Dit is niet verplicht. De kosten voor onze annuleringsservice voor deze reis bedragen &euro;&nbsp;14,50&nbsp;p.p.</p>
+
+		<div class="form__controls">
+			<div class="checkbox">
+				<input
+					type="checkbox"
+					id="check-booking-cancellation"
+					class="js-switch-trigger"
+					data-switch=".switch-anulservice"
+				>
+
+				<div class="checkbox__inner">
+					<span class="checkbox__box"><span class="checkbox__icon">✓</span></span>
+					
+					<label class="checkbox__label" for="check-booking-cancellation">Ja, graag</label>
+				</div><!-- /.checkbox__inner -->
+			</div><!-- /.checkbox -->
+
+			<div class="form__invalid">
+				Dit veld is verplicht
+			</div><!-- /.form__invalid -->
+		</div><!-- /.form__controls -->
+
+		<div class="spacer color-gray"></div><!-- /.spacer -->
+
+		<h5>Reserveringsvoorwaarden en AVG</h5>
+
+		<p>Lees s.v.p. onze <a href="#">reserveringsvoorwaarden</a> en <a href="#">algemene verordering persoonsgegevens</a></p>
+
+		<div class="form__controls is-invalid">
+			<div class="checkbox checkbox--invalid">
+				<input type="checkbox" id="check-booking-agree">
+
+				<div class="checkbox__inner">
+					<span class="checkbox__box"><span class="checkbox__icon">✓</span></span>
+					
+					<label class="checkbox__label" for="check-booking-agree">Gelezen en akkoord</label>
+				</div><!-- /.checkbox__inner -->
+			</div><!-- /.checkbox -->
+
+			<div class="form__invalid">
+				Dit veld is verplicht
+			</div><!-- /.form__invalid -->
+		</div><!-- /.form__controls -->
+
+		<div class="spacer color-gray"></div><!-- /.spacer -->
+
+		<h5>Betalingsmethode</h5>
+
+		<p>Kies uw betalingsmethode</p>
+
+		<div
+			class="form__row form__row--wrap js-switch-trigger js-switch-trigger-radio"
+			data-switches=".switches-bank"
+		>
+			<div class="form__col form__col--alt">
+				<div class="radio form__radio">
+					<input
+						type="radio"
+						name="radio-booking-payment"
+						id="radio-booking-payment-01"
+						checked
+						data-switch=".switch-bank"
+					>
+						
+					<div class="radio__inner">
+						<span class="radio__box"><span class="radio__icon"></span></span>
+						
+						<label class="radio__label" for="radio-booking-payment-01">iDeal</label>
+					</div><!-- /.radio__inner -->
+				</div><!-- /.radio -->
+			</div><!-- /.form__col -->
+			
+			<div class="form__col form__col--alt">
+				<div class="radio form__radio">
+					<input type="radio" name="radio-booking-payment" id="radio-booking-payment-02">
+						
+					<div class="radio__inner">
+						<span class="radio__box"><span class="radio__icon"></span></span>
+						
+						<label class="radio__label" for="radio-booking-payment-02">Bancontact</label>
+					</div><!-- /.radio__inner -->
+				</div><!-- /.radio -->
+			</div><!-- /.form__col -->
+					
+			<div class="form__col form__col--alt">
+				<div class="radio form__radio">
+					<input type="radio" name="radio-booking-payment" id="radio-booking-payment-03">
+						
+					<div class="radio__inner">
+						<span class="radio__box"><span class="radio__icon"></span></span>
+						
+						<label class="radio__label" for="radio-booking-payment-03">Bij aankomst in het hotel</label>
+					</div><!-- /.radio__inner -->
+				</div><!-- /.radio -->
+			</div><!-- /.form__col -->
+					
+			<div class="form__col form__col--alt">
+				<div class="radio form__radio">
+					<input type="radio" name="radio-booking-payment" id="radio-booking-payment-04">
+						
+					<div class="radio__inner">
+						<span class="radio__box"><span class="radio__icon"></span></span>
+						
+						<label class="radio__label" for="radio-booking-payment-04">Bankoverschrijving</label>
+					</div><!-- /.radio__inner -->
+				</div><!-- /.radio -->
+			</div><!-- /.form__col -->
+		</div><!-- /.form__row -->
+
+		<div class="form__row switches-bank js-switches">
+			<div class="form__col">
+				<div class="placeholder-switch">
+					<div class="form__controls form__controls--size-3 switch switch-bank js-switch is-invalid active">
+						<label for="select-booking-bank" class="form__label">Kies uw bank</label>
+						 
+						<div class="select select2-parent form__select js-dropdown-parent">
+							<select class="js-dropdown js-dropdown-lg" id="select-booking-bank">
+								<option value="00">Selecteer</option>
+								<option value="01">Option 2</option>
+								<option value="02">Option 3</option>
+								<option value="03">Option 4</option>
+							</select>
+						</div><!-- /.select -->
+					
+						<div class="form__invalid">
+							Dit veld is verplicht
+						</div><!-- /.form__invalid -->
+					</div><!-- /.form__controls -->
+				</div><!-- /.placeholder-switch -->
+			</div><!-- /.form__col -->
+		</div><!-- /.form__row -->
+
+		<div class="spacer color-black"></div><!-- /.spacer -->
+
+		<div class="form__actions">
+			<div class="btns">
+				<div class="btns__entry">
+					<button
+						class="btn btn--reverse btn--blue js-tab-remote js-tab-remote-solid"
+						data-target=".tab-booking-2"
+					>
+						<span class="btn__content">
+							<h5 class="btn__title">Vorige stap</h5>
+						</span>
+						
+						<span class="btn__icon">
+							<i class="fas fa-arrow-left"></i>
+						</span>
+					</button>
+				</div><!-- /.btns__entry -->
+				
+				<div class="btns__entry">
+					<button class="btn btn--green">
+						<span class="btn__content">
+							<h5 class="btn__title">Boeking afronden</h5>
+						</span>
+						
+						<span class="btn__icon">
+							<i class="fas fa-arrow-right"></i>
+						</span>
+					</button>
+				</div><!-- /.btns__entry -->
+			</div><!-- /.btns -->
+		</div><!-- /.form__actions -->
+	</form>
+</div><!-- /.form -->

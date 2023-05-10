@@ -1,0 +1,58 @@
+/* ------------------------------------------------------------ *\
+	link
+\* ------------------------------------------------------------ */
+
+.link {
+	display: inline-block; 
+	color: $sky;
+	transition: $tsi;
+
+	&:hover,
+	&:focus {
+		color: $white;
+
+		.link__content {
+			text-decoration: underline; 
+		}
+	}
+
+	&.active {
+		color: $white;
+
+		.link__content {
+			text-decoration: none; 
+		}
+	}
+}
+
+/*  link--icon  */
+.link--icon {
+	display: inline-flex; 
+
+	.link__icon {
+		flex: 0 0 auto;
+	}
+
+	.link__content {
+		margin-left: 9px; 
+		flex: 1 1 auto;
+	}
+}
+
+/*  link--social  */
+.link--social {
+	display: block; 
+	width: 24px; 
+	height: 24px; 
+	font-size: 24px; 
+	text-align: center; 
+
+	i {
+		display: block; 
+	}
+}
+
+/*  link--instagram  */
+.link--instagram {
+	font-size: 28px; 
+}

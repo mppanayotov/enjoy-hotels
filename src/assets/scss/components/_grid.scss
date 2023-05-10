@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------ *\
+	Grid
+\* ------------------------------------------------------------ */
+
+.grid {
+	.grid__inner {
+		margin: -$grid-spacer; 
+		display: flex;
+		flex-flow: row wrap;
+
+		@include breakpoint-small-desktop {
+			margin: #{-$grid-spacer-y-sm} #{-$grid-spacer-x-sm}; 
+		}
+	}
+
+	.grid__item {
+		margin: $grid-spacer; 
+		width: 100%; 
+		max-width: 100%;
+		flex: 1 1 auto;
+
+		@include breakpoint-small-desktop {
+			margin: $grid-spacer-y-sm $grid-spacer-x-sm; 
+		}
+	}
+
+	.grid__item--1of2 {
+		max-width: calc(50% - #{$grid-spacer} * 2);
+		flex: 0 1 calc(50% - #{$grid-spacer} * 2);
+
+		@include breakpoint-small-desktop {
+			max-width: calc(50% - #{$grid-spacer-x-sm} * 2);
+			flex: 0 1 calc(50% - #{$grid-spacer-x-sm} * 2);
+		}
+
+		@include breakpoint-mobile {
+			max-width: 100%;
+			flex: 1 1 auto;
+		}
+	}
+
+	.grid__item--1of4 {
+		max-width: calc(25% - #{$grid-spacer} * 2);
+		flex: 0 1 calc(25% - #{$grid-spacer} * 2);
+
+		@include breakpoint-small-desktop {
+			max-width: 100%;
+			flex: 1 1 auto;
+		}
+	}
+
+	.grid__item--2of4 {
+		max-width: calc(50% - #{$grid-spacer} * 2);
+		flex: 0 1 calc(50% - #{$grid-spacer} * 2);
+
+		@include breakpoint-small-desktop {
+			max-width: 100%;
+			flex: 1 1 auto;
+		}
+	}
+
+	.grid__component {
+		height: 100%; 
+	}
+
+	.grid__offset {
+		@include breakpoint-mobile-medium {
+			margin-left: -10px; 
+			margin-right: -10px; 
+		}
+	}
+}

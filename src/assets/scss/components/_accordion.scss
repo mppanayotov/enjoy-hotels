@@ -1,0 +1,311 @@
+/* ------------------------------------------------------------ *\
+	accordion
+\* ------------------------------------------------------------ */
+
+.accordion {
+	position: relative; 
+	padding: 11px 17px 13px;
+	border: 3px solid $light;
+	border-radius: 0 20px 0 20px; 
+	height: 53px; 
+	box-shadow: 0 0 6px transparent;
+	transition: $tsi;
+	color: $purple;
+	cursor: pointer;
+
+	@include breakpoint-small-desktop {
+		padding: 8px 12px 9px;
+		border-radius: 0 10px 0 10px; 
+		height: 44px; 
+	}
+
+	.accordion__head {
+		padding-right: 20px; 
+		font-weight: 600; 
+		cursor: pointer;
+	}
+
+	.accordion__body {
+		overflow: hidden; 
+	}
+
+	.accordion__content {
+		transition: $tsi;
+		opacity: 0; 
+		visibility: hidden; 
+		pointer-events: none;
+	}
+
+	.accordion__article {
+		padding-top: 10px; 
+		padding-right: 30px; 
+		color: $black;
+
+		@include breakpoint-small-desktop {
+			padding-right: 15px; 
+		}
+	}
+
+	.accordion__icon {
+		position: absolute;
+		top: 13px; 
+		right: 17px;
+		font-size: 24px; 
+		line-height: 1; 
+		transition: transform .3s ease-out;
+		letter-spacing: 0;
+		height: 20px; 
+
+		@include breakpoint-small-desktop {
+			top: 10px; 
+			right: 12px; 
+		}
+	}
+
+	.accordion__icon i {
+		display: block; 
+
+		&:before {
+			display: block;
+		}
+	}
+
+	&:hover {
+		color: $blue;
+		box-shadow: 0 0 6px rgba($black, .6);
+	}
+
+	&.init {
+		height: auto; 
+		min-height: 53px; 
+
+		@include breakpoint-small-desktop {
+			min-height: 44px; 
+		}
+	}
+
+	&.active {
+		color: $black;
+		height: auto; 
+		box-shadow: 0 0 6px rgba($black, .6);
+
+		.accordion__content {
+			opacity: 1; 
+			visibility: visible; 
+			pointer-events: auto;
+		}
+
+		.accordion__icon {
+			transform: rotate(-180deg); 
+		}
+
+		&:hover {
+			color: $blue;
+		}
+	}
+}
+
+/*  accordion--alt  */
+.accordion--alt {
+	padding: 0; 
+	cursor: auto;
+
+	.accordion__head {
+		position: relative; 
+		padding: 11px 34px 13px 17px;
+		border-radius: 0 17px 0 17px;
+		transition: $tsi;
+		color: $purple;
+
+		@include breakpoint-small-desktop {
+			padding: 8px 34px 9px 12px;
+			border-radius: 0 7px 0 7px; 
+		}
+
+		&:before {
+			content: '';
+			position: absolute; 
+			top: -3px; 
+			left: -3px; 
+			right: -3px; 
+			bottom: -3px; 
+		}
+
+		&:hover {
+			color: $blue;
+		}
+	}
+
+	.accordion__body {
+		border-bottom-left-radius: 17px;
+	}
+
+	.accordion__dates {
+		padding-top: 1px; 
+	}
+
+	&.active {
+		.accordion__head {
+			border-bottom-left-radius: 0;
+		}
+	}
+}
+
+/*  accordion--alt-sm  */
+.accordion--alt-sm {
+	border-radius: 0 10px 0 10px; 
+	height: 32px; 
+
+	.accordion__head {
+		padding: 4px 34px 4px 7px; 
+		line-height: 18px; 
+
+		&:before {
+			border-radius: 0 10px 0 10px; 
+		}
+	}
+
+	.accordion__body {
+		border-bottom-left-radius: 7px;
+	}
+
+	.accordion__icon {
+    top: 3px;
+		right: 10px;
+		color: inherit;
+	}
+
+	&.init {
+		min-height: 32px; 
+	}
+}
+
+/*  accordion--offset  */
+.accordion--offset {
+	.accordion__title {
+		@include breakpoint-mobile-medium {
+			position: relative; 
+			display: block; 
+			white-space: nowrap;
+			overflow: hidden; 
+			z-index: 1; 
+		}
+	}
+
+	.accordion__hidden-xxs {
+		@include breakpoint-mobile-medium {
+			display: none; 
+		}
+	}
+
+	.accordion__icon {
+		@include breakpoint-mobile-medium {
+			z-index: 1; 
+		}
+	}
+
+	.accordion__head {
+		@include breakpoint-mobile-medium {
+			position: relative; 
+			background-color: $white;
+			z-index: 1; 
+		}
+
+		&:after {
+			@include breakpoint-mobile-medium {
+				content: '';
+				position: absolute; 
+				border: 3px solid $light;
+				border-bottom: 0;
+				background-color: $white;
+				border-radius: 0 10px 0 10px;
+				top: -3px;
+				bottom: -3px; 
+				left: -3px; 
+				right: -3px; 
+				pointer-events: none;
+				transition: $tsi;
+				opacity: 0; 
+				visibility: hidden; 
+				pointer-events: none;
+			}
+		}
+	}
+
+	.accordion__body {
+		@include breakpoint-mobile-medium {
+			position: relative; 
+			margin: -9px; 
+			margin-left: -149px; 
+			padding: 9px; 
+		}
+
+		&:before {
+			@include breakpoint-mobile-medium {
+				content: '';
+				position: absolute; 
+				top: 9px; 
+				left: 6px; 
+				bottom: 6px; 
+				right: 6px; 
+				border: 3px solid $light;
+				border-bottom-left-radius: 10px;
+				background-color: $white; 
+				box-shadow: 0 0 6px rgba($black, .6);
+				transition: $tsi;
+				opacity: 0; 
+				visibility: hidden; 
+				pointer-events: none;
+			}
+		}
+	}
+
+	.accordion__content {
+		@include breakpoint-mobile-medium {
+			position: relative; 
+			border-bottom-left-radius: 7px;
+			overflow: hidden; 
+		}
+	}
+
+	&.init {
+		@include breakpoint-mobile-medium {
+			max-height: 32px; 
+		}
+	}
+
+	&.active {
+		@include breakpoint-mobile-medium {
+			border-bottom-left-radius: 0;
+		}
+
+		.accordion__head {
+			&:after {
+				@include breakpoint-mobile-medium {
+					border-radius: 0 10px 0 0;
+					opacity: 1; 
+					visibility: visible; 
+				}
+			}
+		}
+
+		.accordion__body {
+			&:before {
+				@include breakpoint-mobile-medium {
+					opacity: 1; 
+					visibility: visible; 
+				}
+			}
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	accordions
+\* ------------------------------------------------------------ */
+
+.accordions {
+	.accordions__entry + .accordions__entry {
+		margin-top: 10px; 
+	}
+}

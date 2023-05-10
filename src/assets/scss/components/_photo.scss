@@ -1,0 +1,58 @@
+/* ------------------------------------------------------------ *\
+	photo
+\* ------------------------------------------------------------ */
+
+.photo {
+	position: relative; 
+	width: 100%; 
+	padding-top: 100%; 
+
+	.photo__image {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%; 
+	}
+}
+
+/*  photo--portrait  */
+.photo--portrait {
+	width: 50%; 
+	padding-top: 0; 
+	height: 77%; 
+}
+
+/* ------------------------------------------------------------ *\
+	photos
+\* ------------------------------------------------------------ */
+
+.photos {
+	position: relative; 
+	width: 390px; 
+	max-width: 100%; 
+
+	.photo--portrait {
+		position: absolute; 
+		top: 61.55%; 
+		left: auto; 
+		right: -11.55%; 
+
+		@include breakpoint-small-desktop {
+			right: -10%; 
+		}
+	}
+}
+
+/*  photos--reverse  */
+.photos--reverse {
+	.photo--portrait {
+		left: -11.55%; 
+		right: auto; 
+
+		@include breakpoint-small-desktop {
+			left: auto; 
+			right: -10%; 
+		}
+	}
+}

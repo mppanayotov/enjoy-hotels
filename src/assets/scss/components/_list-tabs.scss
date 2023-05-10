@@ -1,0 +1,34 @@
+/* ------------------------------------------------------------ *\
+	list-tabs
+\* ------------------------------------------------------------ */
+
+.list-tabs {
+	display: flex; 
+
+	li {
+		position: relative; 
+		flex: 0 1 auto;
+
+		&:before {
+			content: '';
+			position: absolute; 
+			top: 50%; 
+			left: 0; 
+			transform: translateY(-50%); 
+			height: 30px; 
+			width: 1px; 
+			background-color: #004F9F; 
+			pointer-events: none;
+			display: none; 
+		}
+	}
+
+	li + li {
+		margin-left: 14px; 
+		padding-left: 15px; 
+
+		&:before {
+			display: block; 
+		}
+	}
+}

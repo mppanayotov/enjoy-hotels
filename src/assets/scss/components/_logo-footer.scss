@@ -1,0 +1,48 @@
+/* ------------------------------------------------------------ *\
+	logo-footer
+\* ------------------------------------------------------------ */
+
+.logo-footer {
+	margin-left: auto; 
+	margin-right: auto; 
+	width: 100%; 
+	max-width: 520px; 
+	display: flex; 
+	font-size: 21px; 
+	letter-spacing: -0.004em; 
+
+	@include breakpoint-small-desktop {
+		max-width: 460px; 
+		font-size: 15px; 
+	}
+
+	@include breakpoint-mobile-medium {
+		display: block; 
+	}
+
+	.logo__image {
+		margin-right: 20px; 
+		flex: 0 0 auto;
+
+		@include breakpoint-small-desktop {
+			width: 216px; 
+		}
+
+		@include breakpoint-mobile-medium {
+			margin-left: auto; 
+			margin-right: auto; 
+		}
+	}
+
+	.logo__slogan {
+		margin-top: auto; 
+		margin-left: auto; 
+		padding-bottom: 5px; 
+		flex: 0 1 auto;
+
+		@include breakpoint-mobile-medium {
+			margin-top: 20px; 
+			text-align: center; 
+		}
+	}
+}

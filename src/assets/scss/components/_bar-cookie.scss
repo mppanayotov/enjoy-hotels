@@ -1,0 +1,83 @@
+/* ------------------------------------------------------------ *\
+	bar-cookie
+\* ------------------------------------------------------------ */
+
+.bar-cookie {
+	position: fixed; 
+	left: 0; 
+	right: 0; 
+	bottom: 0; 
+	padding: 9px 0; 
+	box-shadow: 0 1px 0 #99C8EB inset;
+	background-color: #004F9F; 
+	color: $white;
+	line-height: 1.3; 
+	letter-spacing: -0.02em;
+	z-index: 30; 
+
+	@include breakpoint-small-desktop {
+		bottom: 60px; 
+		padding: 11px 0 12px; 
+		font-size: 11px; 
+	}
+
+	.bar__inner {
+		display: flex; 
+	}
+
+	.bar__main {
+		padding-right: 30px; 
+		flex: 1 1 auto;
+		display: flex; 
+		align-items: center;
+
+		@include breakpoint-small-desktop {
+			padding-right: 15px; 
+		}
+	}
+
+	.bar__content {
+		flex: 1 1 auto;
+		margin: auto 0;
+	}
+
+	.bar__actions {
+		flex: 0 0 auto;
+	}
+
+	.bar__title {
+		display: inline-block;
+		margin-right: 15px; 
+
+		@include breakpoint-small-desktop {
+			margin-right: 8px; 
+		}
+	}
+
+	.bar__link {
+		text-decoration: underline; 
+		color: $sky;
+		transition: $tsi;
+		font-weight: 600; 
+
+		&:hover {
+			text-decoration: underline; 
+			color: $white;
+		}
+	}
+
+	&.is-hidden {
+		opacity: 0; 
+		visibility: hidden; 
+		pointer-events: none;
+		transition: visibility .9s ease-out, opacity .9s ease-out;
+
+		.bar__actions {
+			transform: translateX(30px); 
+			opacity: 0; 
+			visibility: hidden; 
+			pointer-events: none;
+			transition: transform .5s ease-out, visibility .5s ease-out, opacity .5s ease-out;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+/* ------------------------------------------------------------ *\
+	placeholder-accordion
+\* ------------------------------------------------------------ */
+
+.placeholder-accordion {
+	height: 53px; 
+
+	@include breakpoint-small-desktop {
+		height: 44px; 
+	}
+}

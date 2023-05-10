@@ -1,0 +1,310 @@
+/* ------------------------------------------------------------ *\
+	tile
+\* ------------------------------------------------------------ */
+
+.tile {
+	position: relative; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+
+	h2 {
+		text-shadow: 0 2px rgba($purple, .7);
+
+		@include breakpoint-small-desktop {
+			font-size: 21px; 
+			text-shadow: none;
+		}
+
+		@include breakpoint-mobile-medium {
+			font-size: 18px; 
+		}
+	}
+
+	.tile__image {
+		position: relative; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		padding-top: 66.48%;
+
+		@include breakpoint-small-desktop {
+			margin-top: 5px; 
+		}
+
+		@include breakpoint-mobile-medium {
+			margin-bottom: 63px; 
+		}
+
+		@include breakpoint-mobile-medium {
+			margin-bottom: 46px; 
+		}
+	}
+
+	.tile__poster {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%; 
+	}
+
+	.tile__shade {
+		@include breakpoint-small-desktop {
+			display: none; 
+		}
+	}
+
+	.tile__inner {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		padding: 20px;	
+		width: 100%; 
+		height: 100%; 
+		z-index: 1; 
+
+		@include breakpoint-small-desktop {
+			position: relative; 
+			padding: 0; 
+		}
+	}
+
+	.tile__location {
+		color: $white;
+		font-weight: 600; 
+
+		@include breakpoint-small-desktop {
+			color: $black;
+			font-size: 13px; 
+		}
+	}
+
+	.tile__title {
+		color: $white;
+		transition: $tsi;
+
+		@include breakpoint-small-desktop {
+			color: $purple;
+		}
+	}
+
+	.tile__stars {
+		margin-top: 15px; 
+		margin-left: 6px; 
+
+		@include breakpoint-small-desktop {
+			margin-top: 2px; 
+			display: none; 
+		}
+	}
+
+	.tile__stars--alt {
+		display: none; 
+
+		@include breakpoint-small-desktop {
+			display: block; 
+		}
+	}
+
+	.tile__stamps {
+		position: absolute; 
+		display: flex; 
+		bottom: 10px; 
+		right: 10px; 
+
+		@include breakpoint-mobile-medium {
+			transform: translateY(100%); 
+			bottom: -10px; 
+			left: 0; 
+			right: auto; 
+			pointer-events: none;
+		}
+	}
+
+	.tile__link {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%; 
+		z-index: 5; 
+	}
+
+	&:hover,
+	&:focus {
+		@include breakpoint-small-desktop {
+			.tile__title {
+				color: $blue;
+			}
+		}
+	}
+}
+
+/*  tile--lg  */
+.tile--lg {
+	padding-top: 0; 
+
+	h2 {
+		font-size: 48px; 
+		line-height: 1.3; 
+		text-shadow: 0 2px rgba($purple, .7);
+
+		@include breakpoint-small-desktop {
+			font-size: 28px; 
+		}
+
+		@include breakpoint-mobile-medium {
+			font-size: 20px; 
+		}
+	}
+
+	.tile__image {
+		margin: 0; 
+		padding-top: 0; 
+		height: 100%; 
+	}
+
+	.tile__shade {
+		display: block; 
+	}
+
+	.tile__inner {
+		position: absolute; 
+		padding: 177px 9% 0; 
+
+		@include breakpoint-mobile {
+			padding: 35px $shell-gutter;
+		}
+	}
+
+	.tile__location {
+		color: $white;
+	}
+
+	.tile__title {
+		color: $white; 
+
+		@include breakpoint-small-desktop {
+			margin-top: 4px; 
+		}
+	}
+
+	.tile__stars {
+		margin-top: 12px; 
+
+		@include breakpoint-small-desktop {
+			margin-top: 2px; 
+			display: block; 
+		}
+	}
+
+	.tile__stars--alt {
+		display: none; 
+	}
+
+	.tile__stamps {
+		position: static; 
+		margin-top: 16px; 
+		transform: none;
+	}
+
+	.tile__actions {
+		margin-top: 16px; 
+	}
+
+	&:hover,
+	&:focus {
+		.tile__title {
+			color: $white;
+		}
+	}
+}
+
+/*  tile--sm  */
+.tile--sm {
+	.tile__image {
+		margin-top: 5px; 
+
+		@include breakpoint-small-desktop {
+			margin-bottom: 63px; 
+		}
+
+		@include breakpoint-mobile-medium {
+			margin-bottom: 46px; 
+		}
+	}
+
+	.tile__shade {
+		display: none; 
+	}
+
+	.tile__inner {
+		position: relative; 
+		padding: 0; 
+	}
+
+	.tile__location {
+		color: $black;
+		font-size: 13px; 
+	}
+
+	.tile__title {
+		color: $purple;
+	}
+
+	.tile__stars {
+		margin-top: 2px; 
+		display: none; 
+	}
+
+	.tile__stars--alt {
+		display: block; 
+	}
+
+	.tile__stamps {
+		@include breakpoint-small-desktop {
+			transform: translateY(100%); 
+			bottom: -10px; 
+			left: 0; 
+			right: auto; 
+			pointer-events: none;
+		}
+	}
+
+	&:hover,
+	&:focus {
+		.tile__title {
+			color: $blue;
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	tiles
+\* ------------------------------------------------------------ */
+
+.tiles {
+}
+
+/*  tiles--full  */
+.tiles--full {
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+
+	.tiles__inner {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%; 
+	}
+
+	.tile {
+		position: absolute; 
+		height: 100%; 
+	}
+}

@@ -1,0 +1,73 @@
+/* ------------------------------------------------------------ *\
+	sidebar-nav
+\* ------------------------------------------------------------ */
+
+.sidebar-nav {
+	padding: 20px 0 10px 20px;
+	border-top-left-radius: 20px;
+	background-color: $white;
+
+	.sidebar__inner {
+		position: relative; 
+		display: flex; 
+		height: 90px; 
+	}
+
+	.sidebar__logo {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 132px; 
+		flex: 0 0 auto;
+		z-index: 1; 
+		transition: transform .5s ease-out;
+	}
+
+	.sidebar__logo--center {
+		transform: translateX(139px); 
+	}
+
+	.sidebar__content {
+		margin-left: auto; 
+		padding-left: 20px; 
+		width: 278px; 
+		max-width: 278px; 
+		flex: 1 1 auto;
+		display: flex; 
+		flex-direction: column;
+		align-items: flex-end;
+	}
+
+	.sidebar__actions {
+		margin-top: auto; 
+	}
+
+	.sidebar__link {
+		color: $purple;
+		line-height: 1; 
+
+		&:hover,
+		&:focus {
+			color: $blue;
+		}
+	}
+
+	.sidebar__arrangements-hidden {
+		position: relative; 
+		transition: opacity .5s ease-out, visibility .5s ease-out;
+	}
+}
+
+/*  sidebar arrangements active  */
+.sidebar-nav.has-arrangements-active {
+	.sidebar__arrangements-hidden {
+		opacity: 0; 
+		visibility: hidden;
+		pointer-events: none;
+		transition: opacity .5s linear, visibility .5s linear;
+	}	
+
+	.sidebar__logo {
+		transform: translateX(139px); 
+	}
+}

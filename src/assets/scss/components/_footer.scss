@@ -1,0 +1,165 @@
+/* ------------------------------------------------------------ *\
+	Footer
+\* ------------------------------------------------------------ */
+
+.footer {
+	position: relative; 
+	z-index: 2; 
+	letter-spacing: -.035em;
+
+	@include breakpoint-small-desktop {
+		font-size: 13px; 
+	}
+
+	.footer__bar,
+	.footer__logos,
+	.footer__callout {
+		margin-top: 30px; 
+
+		@include breakpoint-small-desktop {
+			margin-top: 20px; 
+		}
+	}
+
+	.footer__cols {
+		display: flex; 
+		margin: -10px -20px; 
+		flex-wrap: wrap;
+	}
+
+	.footer__cols--lg {
+		margin: -15px -20px; 
+	}
+
+	.footer__col {
+		margin: 10px 20px; 
+		max-width: calc(33.33% - 20px * 2);
+		flex: 0 0 calc(33.33% - 20px * 2);
+
+		@include breakpoint-mobile {
+			max-width: calc(50% - 20px * 2);
+			flex: 0 0 calc(50% - 20px * 2);
+		}
+
+		@include breakpoint-mobile-medium {
+			max-width: calc(100% - 20px * 2);
+			flex: 0 0 calc(100% - 20px * 2);
+		}
+	}
+
+	.footer__col--lg {
+		margin: 15px 20px; 
+
+		@include breakpoint-tablet {
+			max-width: calc(50% - 20px * 2);
+			flex: 0 0 calc(50% - 20px * 2);
+		}
+
+		@include breakpoint-mobile {
+			max-width: calc(100% - 20px * 2);
+			flex: 0 0 calc(100% - 20px * 2);
+		}
+	}
+
+	.footer__lists {
+		display: flex; 
+	}
+
+	.footer__list {
+		flex: 1 1 50%;
+	}
+
+	.footer__list + .footer__list {
+		margin-left: 20px; 
+
+		@include breakpoint-small-desktop {
+			margin-left: 30px; 
+		}
+	}
+
+	.footer__spacer {
+		padding-top: 30px; 
+		padding-bottom: 30px; 
+		color: #004F9F; 
+	}
+
+	.footer__spacer--alt {
+		padding-top: 0; 
+		color: $light;
+
+		&:before {
+			top: 0; 
+		}
+
+		@include breakpoint-tablet {
+			padding-bottom: 15px; 
+		}
+	}
+
+	.footer__spacer--lg {
+		margin-top: 60px; 
+
+		@include breakpoint-tablet {
+			margin-top: 0; 
+		}
+	}
+
+	.footer__content {
+		padding: 60px 0;
+
+		@include breakpoint-small-desktop {
+			padding: 40px 0;
+		}
+
+		@include breakpoint-tablet {
+			padding: 20px 0;
+		}
+	}
+
+	.footer__address,
+	.footer__contact {
+		font-size: 17px; 
+		line-height: 1.5; 
+
+		@include breakpoint-small-desktop {
+			font-size: 15px; 
+		}
+	}
+
+	.footer__articles {
+		text-align: center; 
+		
+		h2 {
+			padding-bottom: 10px; 
+
+			@include breakpoint-small-desktop {
+				font-size: 28px; 
+			}
+
+			@include breakpoint-mobile-medium {
+				font-size: 21px; 
+			}
+		}
+	}
+
+	.footer__socials {
+		margin-top: 8px; 
+	}
+
+	.footer__title  {
+		margin-bottom: 3px; 
+	}
+
+	.footer__title--alt  {
+		font-size: 17px; 
+
+		@include breakpoint-small-desktop {
+			font-size: 15px; 
+		}
+	}
+
+	.footer__copyright {
+		margin-top: 27px; 
+		text-align: center; 
+	}
+}

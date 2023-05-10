@@ -1,0 +1,28 @@
+/* ------------------------------------------------------------ *\
+	zoom
+\* ------------------------------------------------------------ */
+
+.zoom {
+	.zoom__container {
+		position: relative; 
+		overflow: hidden; 
+		transform-style: preserve-3d;
+	}
+
+	.zoom__inner {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		right: 0; 
+		bottom: 0; 
+		transform: scale(1.001); 
+		transition: transform .3s ease-out;
+	}
+
+	&:hover,
+	&:focus {
+		.zoom__inner {
+			transform: scale(1.05); 
+		}
+	}
+}

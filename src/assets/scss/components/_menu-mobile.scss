@@ -1,0 +1,64 @@
+/* ------------------------------------------------------------ *\
+	menu-mobile
+\* ------------------------------------------------------------ */
+
+.menu-mobile {
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	right: 0; 
+	bottom: 60px; 
+	padding-top: 20px; 
+	background-color: rgba($white, .95);
+	display: none; 
+	transition: $tsi;
+	z-index: 40; 
+	opacity: 0; 
+	visibility: hidden; 
+	pointer-events: none;
+
+	&.active {
+		opacity: 1; 
+		visibility: visible; 
+		pointer-events: auto;
+	}
+
+	@include breakpoint-small-desktop {
+		display: block; 
+	}
+
+	.menu__shell {
+		@include breakpoint-mobile-medium {
+			padding-left: $header-gutter-xxs; 
+			padding-right: $header-gutter-xxs; 
+		}
+	}
+
+	.menu__inner {
+		display: flex; 
+		padding-bottom: 10px; 
+	}
+
+	.menu__logo {
+		flex: 0 0 auto;
+	}
+
+	.menu__dropdown {
+		margin-top: 5px; 
+		margin-left: auto; 
+		flex: 0 0 auto;
+	}
+
+	.menu__nav {
+		margin-left: -$shell-gutter; 
+		margin-right: -$shell-gutter; 
+		padding: 0 $shell-gutter 100px; 
+		height: calc(100vh - 140px); 
+		overflow-y: auto;
+
+		@include breakpoint-mobile-medium {
+			margin-left: -$header-gutter-xxs; 
+			margin-right: -$header-gutter-xxs; 
+		}
+	}
+}

@@ -1,0 +1,46 @@
+/* ------------------------------------------------------------ *\
+	article-header
+\* ------------------------------------------------------------ */
+
+.article-header {
+	text-align: center; 
+
+	@include breakpoint-small-desktop {
+		position: relative; 
+		padding-left: 18px; 
+		padding-top: 5px; 
+		text-align: left; 
+	}
+
+	h5 {
+		margin-top: -4px; 
+
+		@include breakpoint-small-desktop {
+			margin-top: 0; 
+			font-size: 15px; 
+		}
+
+		@include breakpoint-mobile {
+			font-size: 11px; 
+		}
+	}
+	
+	i {
+		@include breakpoint-small-desktop {
+			position: absolute; 
+			top: 0; 
+			left: 0; 
+		}
+
+		@include breakpoint-mobile {
+			top: -4px; 
+		}
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	articles-header
+\* ------------------------------------------------------------ */
+
+.articles-header {
+}

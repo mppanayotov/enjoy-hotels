@@ -1,0 +1,242 @@
+/* ------------------------------------------------------------ *\
+	form
+\* ------------------------------------------------------------ */
+
+.form {
+	line-height: 1; 
+
+	@include breakpoint-small-desktop {
+		font-size: 13px; 
+	}
+
+	h2 {
+		margin-bottom: 25px; 
+		line-height: 1; 
+	}
+
+	h5 {
+		margin-bottom: 15px;  
+		font-size: 17px; 
+		font-weight: 600; 
+		line-height: 1; 
+	}
+
+	p {
+		margin-bottom: 18px; 
+
+		@include breakpoint-small-desktop {
+			margin-bottom: 14px; 
+		}
+	}
+
+	a {
+		color: $purple;
+		text-decoration: underline; 
+		font-weight: 600; 
+
+		&:hover,
+		&:focus {
+			text-decoration: none; 
+			color: $blue;
+		}
+	}
+
+	.form__radio {
+		margin-right: 20px; 
+
+		@include breakpoint-small-desktop {
+			margin-right: 0;
+		}
+	}
+	
+	.form__label {
+		display: block; 
+	}
+
+	.form__label + .form__field,
+	.form__label + .form__select {
+		margin-top: 10px; 
+
+		@include breakpoint-small-desktop {
+			margin-top: 7px; 
+		}
+	}
+
+	.form__row {
+		margin: -10px; 
+		display: flex; 
+
+		@include breakpoint-mobile-medium {
+			display: block; 
+		}
+	}
+
+	.form__row--wrap {
+		flex-wrap: wrap;
+	}
+
+	.form__row + .form__row,
+	.form__row + .form__controls,
+	.form__controls + .form__controls {
+		margin-top: 28px; 
+
+		@include breakpoint-small-desktop {
+			margin-top: 18px; 
+		}
+	}
+
+	.form__col {
+		padding: 10px; 
+		flex: 1 1 auto;
+	}
+
+	.form__col--alt {
+		flex: 0 1 auto;
+	}
+
+	.form__col--size-1 {
+		min-width: 200px; 
+		max-width: 20%; 
+		flex: 1 0 auto;
+
+		@include breakpoint-small-desktop {
+			min-width: 152px; 
+			flex: 0 0 auto;
+		}
+
+		@include breakpoint-mobile-medium {
+			min-width: 0; 
+			max-width: none; 
+		}
+	}
+
+	.form__col--size-2 {
+		width: 100%; 
+		max-width: 170px; 
+		flex: 0 0 auto;
+
+		@include breakpoint-small-desktop {
+			max-width: 152px; 
+		}
+
+		@include breakpoint-mobile-medium {
+			max-width: none; 
+		}
+	}
+
+	.form__col--size-3 {
+		min-width: 400px; 
+
+		@include breakpoint-small-desktop {
+			min-width: 308px; 
+		}
+
+		@include breakpoint-mobile-medium {
+			min-width: none; 
+		}
+	}
+
+	.form__col--size-4 {
+		max-width: 220px; 
+
+		@include breakpoint-small-desktop {
+			max-width: 130px; 
+		}
+
+		@include breakpoint-mobile-medium {
+			max-width: none; 
+		}
+	}
+
+	.form__controls--size-1 {
+		max-width: 180px;
+
+		@include breakpoint-small-desktop {
+			max-width: 132px; 
+		}
+
+		@include breakpoint-mobile-medium {
+			max-width: none; 
+		}
+	}
+
+	.form__controls--size-2 {
+		max-width: 150px;
+
+		@include breakpoint-small-desktop {
+			max-width: 132px; 
+		}
+
+		@include breakpoint-mobile-medium {
+			max-width: none; 
+		}
+	}
+
+	.form__controls--size-3 {
+		max-width: 330px;
+
+		@include breakpoint-small-desktop {
+			max-width: 210px; 
+		}
+
+		@include breakpoint-mobile-medium {
+			max-width: none; 
+		}
+	}
+
+	.form__invalid {
+		margin-top: 5px; 
+		padding: 2px 0;
+		display: none; 
+		font-style: italic;
+		color: $sunset;
+
+		@include breakpoint-small-desktop {
+			font-size: 13px; 
+		}
+	}
+
+	.is-invalid {
+		.form__invalid {
+			display: block; 
+		}
+
+		.form__field {
+			background-color: #FFE8EA; 
+			border-color: $sunset;
+		}
+
+		.select2-container:not(.select2-container--open) {
+			.select2-selection {
+				.select2-selection__rendered {
+					border-color: $sunset;
+					background-color: #FFE8EA; 
+				}
+			}
+		}
+	}
+
+	.is-valid {
+		.form__field {
+			background-color: #EFFFE8; 
+			border-color: $apple;
+		}
+
+		.select2-container:not(.select2-container--open) {
+			.select2-selection {
+				.select2-selection__rendered {
+					border-color: $apple;
+					background-color: #EFFFE8; 
+				}
+			}
+		}
+	}
+}
+
+/*  form--booking  */
+.form--booking {
+	.form__select {
+		color: $purple;
+	}
+}
+

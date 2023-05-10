@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<include src="head.html"></include>
+<body>
+	<div class="wrapper select2-wrapper js-dropdown-wrapper js-wrapper js-tabs">
+		<div class="placeholder-header placeholder-header--fixed js-header has-fixed-nav">
+			<include src="header.html"></include>
+		</div><!-- /.placeholder-header -->
+
+		<include src="bar.html"></include>
+
+		<include src="bar-cookie.html"></include>
+
+		<include src="menu-mobile.html"></include>
+
+		<div class="main">
+			<div class="placeholder-nav placeholder-nav--fixed">
+				<div class="placeholder__inner js-sticky-trigger">
+					<include src="nav-steps.html"></include>
+				</div><!-- /.placeholder__inner -->
+			</div><!-- /.placeholder-nav -->
+
+			<div class="main__inner">
+				<div class="main__link" id="content"></div><!-- /.main__link -->
+
+				<div class="sections">
+					<div class="section section--sidebar">
+						<div class="shell">
+							<div class="section__inner">
+								<div class="section__main">
+									<div class="tabs">
+										<div class="tabs__inner">
+											<div class="tab bg-white tab-booking-1 js-tab js-tab-solid active">
+												<div class="section__form">
+													<include src="form-booking-1.html"></include>
+												</div><!-- /.section__form -->
+											</div><!-- /.tab -->
+											
+											<div class="tab bg-white tab-booking-2 js-tab js-tab-solid">
+												<div class="section__form">
+													<include src="form-booking-2.html"></include>
+												</div><!-- /.section__form -->
+											</div><!-- /.tab -->
+											
+											<div class="tab bg-white tab-booking-3 js-tab js-tab-solid">
+												<div class="section__form">
+													<include src="form-booking-3.html"></include>
+												</div><!-- /.section__form -->
+											</div><!-- /.tab -->
+										</div><!-- /.tabs__inner -->
+									</div><!-- /.tabs -->
+								</div><!-- /.section__main -->
+							
+								<div class="section__sidebar">
+									<div class="sidebar sidebar--alt tabs js-tabs js-tabs-step">
+										<div class="tabs__inner">
+											<div class="sidebar__entry bg-cream">
+												<include src="summary.html"></include>
+											</div><!-- /.sidebar__entry -->
+											
+											<div class="sidebar__entry tab tab--alt bg-cream tab-booking-2 js-tab js-tab-step">
+												<include src="summary-1.html"></include>
+											</div><!-- /.sidebar__entry -->
+											
+											<div class="sidebar__entry sidebar__entry--alt tab tab--alt bg-cream tab-booking-2 js-tab js-tab-step">
+												<include src="summary-2.html"></include>
+											</div><!-- /.sidebar__entry -->
+											
+											<div class="sidebar__entry sidebar__entry--alt tab tab--alt bg-white tab-booking-2 js-tab js-tab-step">
+												<include src="summary-3.html"></include>
+											</div><!-- /.sidebar__entry -->
+											
+											<div class="tab tab--alt bg-cream tab-booking-3 js-tab js-tab-step">
+												<div class="placeholder-switch">
+													<div class="sidebar__switch switch switch-anulservice js-switch">
+														<include src="summary-4.html"></include>
+													</div><!-- /.sidebar__switch -->
+												</div><!-- /.placeholder-switch -->
+											</div><!-- /.tab -->
+																				
+											<div class="sidebar__entry">
+												<div class="article">
+													<ul>
+														<li><em>Geen boekings-, reserveringskosten en geen toeslag voor 1 persoonskamers</em></li>
+														
+														<li><em>Persoonlijke telefonische assistentie als u er niet uitkomt</em></li>
+														
+														<li><em>Aanbetaling is niet verplicht</em></li>
+													</ul>
+												</div><!-- /.article -->
+											</div><!-- /.sidebar__entry -->
+										</div><!-- /.tabs__inner -->
+									</div><!-- /.sidebar -->
+								</div><!-- /.section__sidebar -->
+
+								<div class="section__actions tabs hidden-lg">
+									<div class="tabs__inner">
+										<div class="tab bg-white tab-booking-1 js-tab js-tab-solid active">
+											<div class="btns">
+												<div class="btns__entry">
+													<button
+														class="btn btn--green js-tab-remote js-tab-remote-solid"
+														data-target=".tab-booking-2"
+													>
+														<span class="btn__content">
+															<h5 class="btn__title">Volgende stap</h5>
+														</span>
+														
+														<span class="btn__icon">
+															<i class="fas fa-arrow-right"></i>
+														</span>
+													</button>
+												</div><!-- /.btns__entry -->
+											</div><!-- /.btns -->
+										</div><!-- /.tab -->
+
+										<div class="tab bg-white tab-booking-2 js-tab js-tab-solid">
+											<div class="btns">
+												<div class="btns__entry">
+													<button
+														class="btn btn--reverse btn--blue js-tab-remote js-tab-remote-solid active"
+														data-target=".tab-booking-1"
+													>
+														<span class="btn__content">
+															<h5 class="btn__title">Vorige stap</h5>
+														</span>
+														
+														<span class="btn__icon">
+															<i class="fas fa-arrow-left"></i>
+														</span>
+													</button>
+												</div><!-- /.btns__entry -->
+												
+												<div class="btns__entry">
+													<button
+														class="btn btn--green js-tab-remote js-tab-remote-solid"
+														data-target=".tab-booking-3"
+													>
+														<span class="btn__content">
+															<h5 class="btn__title">Volgende stap</h5>
+														</span>
+														
+														<span class="btn__icon">
+															<i class="fas fa-arrow-right"></i>
+														</span>
+													</button>
+												</div><!-- /.btns__entry -->
+											</div><!-- /.btns -->
+										</div><!-- /.tab -->
+
+										<div class="tab bg-white tab-booking-3 js-tab js-tab-solid">
+											<div class="btns">
+												<div class="btns__entry">
+													<button
+														class="btn btn--reverse btn--blue js-tab-remote js-tab-remote-solid"
+														data-target=".tab-booking-2"
+													>
+														<span class="btn__content">
+															<h5 class="btn__title">Vorige stap</h5>
+														</span>
+														
+														<span class="btn__icon">
+															<i class="fas fa-arrow-left"></i>
+														</span>
+													</button>
+												</div><!-- /.btns__entry -->
+												
+												<div class="btns__entry">
+													<button class="btn btn--green">
+														<span class="btn__content">
+															<h5 class="btn__title">Boeking afronden</h5>
+														</span>
+														
+														<span class="btn__icon">
+															<i class="fas fa-arrow-right"></i>
+														</span>
+													</button>
+												</div><!-- /.btns__entry -->
+											</div><!-- /.btns -->
+										</div><!-- /.tab -->
+									</div><!-- /.tabs__inner -->
+								</div><!-- /.section__actions -->
+							</div><!-- /.section__inner -->
+						</div><!-- /.shell -->
+					</div><!-- /.section -->
+				</div><!-- /.sections -->
+			</div><!-- /.main__inner -->
+		</div><!-- /.main -->
+
+		<include src="footer.html"></include>
+	</div><!-- /.wrapper -->
+
+	<include src="scripts.html"></include>
+</body>
+</html>

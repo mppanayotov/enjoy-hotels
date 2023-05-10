@@ -1,0 +1,112 @@
+/* ------------------------------------------------------------ *\
+	Icon-logo
+\* ------------------------------------------------------------ */
+
+.icon-logo {
+	position: relative; 
+	width: 260px; 
+	display: block; 
+
+	svg {
+		display: block; 
+	}
+
+	@include breakpoint-small-desktop {
+		width: 174px; 
+		max-width: 100%; 
+	}
+
+	.icon__letter {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		display: block; 
+		color: currentColor;
+		transition: $tsi;
+
+		@include breakpoint-small-desktop {
+			width: 40px; 
+			height: 40px; 
+		}
+	}
+
+	.icon__text {
+		position: relative; 
+		display: block; 
+
+		@include breakpoint-small-desktop {
+			height: 40px; 
+		}
+	}
+
+	.icon__rect {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 23.08%; 
+		height: 100%; 
+		background-color: $white; 
+	}
+	
+	.icon__rect svg {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		width: 100%; 
+		height: 100%; 
+		transition: $tsi;
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	icon-flag
+\* ------------------------------------------------------------ */
+
+.icon-flag {
+	position: relative; 
+	width: 24px; 
+	height: 18px; 
+	display: block; 
+
+	img,
+	svg {
+		width: 100%; 
+		height: auto; 
+		display: block; 
+	}
+}
+
+/*  icon-flag--sm  */
+.icon-flag {
+	width: 21px; 
+}
+
+/* ------------------------------------------------------------ *\
+	icon-pin
+\* ------------------------------------------------------------ */
+
+.icon-pin {
+	position: relative; 
+	width: 39px; 
+	height: 24px; 
+	display: block; 
+
+	@include breakpoint-small-desktop {
+		width: 30px; 
+		height: 18px; 
+	}
+
+	img,
+	svg {
+		width: 100%; 
+		height: auto; 
+		display: block; 
+	}
+}
+
+/*  icon-pin--sm  */
+.icon-pin--sm {
+	width: 30px; 
+	height: 18px; 
+	display: block; 
+}
