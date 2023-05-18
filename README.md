@@ -1,6 +1,6 @@
 # Live Demo
 
-https://mppanayotov-enjoy-hotels.surge.sh/
+https://mppanayotov-enjoy-hotels.surge.sh
 
 # Task Runner
 
